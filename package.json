@@ -1,0 +1,14 @@
+{
+  "name"         : "rss-generator",
+  "version"      : "4.0.4",
+  "description"  : "Parses RSS feed for Squarespace + Mailchimp.",
+  "main"         : "main.js",
+  "author"       : "Marcus Skov",
+  "dependencies" : {
+    "xmlhttprequest"    : "latest",
+    "rss"               : "latest",
+    "node-schedule"     : "latest",
+    "forever"			      : "latest",
+    "forever-monitor"   : "latest"
+  }
+}
