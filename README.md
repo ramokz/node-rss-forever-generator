@@ -138,3 +138,5 @@ forever stop forever.js
 
 ### _Further information_
 [forever documentaiton](https://www.npmjs.com/package/forever)
+
+If everything has been formatted correctly you should have a newly generated RSS feed in your root folder of the repository.
