@@ -6,6 +6,13 @@
 - [Node.js](https://nodejs.org/en/) - alternatively install using [Homebrew](http://brew.sh/)
 - Remote server - unless you want to run it on your own machine (**Not recommended**)
 
+### List of Node packages used
+- **node-xmlhttprequest** - Fetches the data from a remote file on a server (also known as AJAX).
+- **node-rss** — For parsing and structuring the fetched data into a rss friendly format.
+- **node-schedule** — For running the above process on a set interval (once a minute, hourly, daily, weekly, etc.).
+- **forever** — Keeps the entire process alive and continuously running on the server. Otherwise we would need to run the script manually.
+- **forever-monitor** — Allows us to set some rules for when running forever. Not vital but keeps things a bit more manageable.
+
 
 ## Installation
 
