@@ -3,7 +3,7 @@
 
 ## Prerequisites
 
-- [Node.js](https://nodejs.org/en/)
+- [Node.js](https://nodejs.org/en/) - alternatively install using [Homebrew](http://brew.sh/)
 - Remote server - Unless you want to run it on your own machine (**Not recommended**)
 
 
