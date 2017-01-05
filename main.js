@@ -49,7 +49,7 @@ var scriptRunner = schedule.scheduleJob(rule, function() {
           copyright       : 'year© yourCompany', // optional
           language        : 'en', // optional - Full reference list: http://www.rssboard.org/rss-language-codes
           categories      : ['category 1', 'category 2', 'category 3'], // optional - e.g. design, news, 
-          Pubdate         : 'Nov 29, 2016 04:00:00 GMT', // optional - date the RSS feed came online
+          Pubdate         : 'Jan 01, 2017 00:00:00 GMT', // optional - date the RSS feed came online
           ttl             : '60', // optional - how many minutes the channel is cached before being refreshed from the source
           custom_namespaces: {
             'content' : 'http://purl.org/rss/1.0/modules/content/',
