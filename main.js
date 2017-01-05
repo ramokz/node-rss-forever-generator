@@ -42,16 +42,16 @@ var scriptRunner = schedule.scheduleJob(rule, function() {
           description     : 'Description of your feed',
           site_url        : 'https://yourSite.com/',
           feed_url        : 'https://yourSite.com/feed.xml',
-          image_url       : 'https://yourDomain/images/rss_image.png', // optional - feed thumbnail
-          docs            : 'https://validator.w3.org/feed/docs/rss2.html', // optional
-          managingEditor  : 'editor@yourCompany', // optional
-          webMaster       : 'webMaster@yourCompany', // optional
-          copyright       : 'year© yourCompany', // optional
-          language        : 'en', // optional - Reference: http://www.rssboard.org/rss-language-codes
-          categories      : ['category 1', 'category 2', 'category 3'], // optional - e.g. design, news, cooking
-          Pubdate         : 'Nov 29, 2016 04:00:00 GMT', // optional - date the RSS feed came online
-          ttl             : '60', // optional - how many minutes the channel is cached before being refreshed from the source
-          custom_namespaces: { // Defines the media:content used below. This is required to make images defined there to appear in some RSS readers
+          image_url       : 'https://yourDomain/images/rss_image.png', // Optional - Thumbnail
+          docs            : 'https://validator.w3.org/feed/docs/rss2.html', // Optional
+          managingEditor  : 'editor@yourCompany', // Optional
+          webMaster       : 'webMaster@yourCompany', // Optional
+          copyright       : 'year© yourCompany', // Optional
+          language        : 'en', // Optional - Reference: http://www.rssboard.org/rss-language-codes // Optional
+          categories      : ['category 1', 'category 2', 'category 3'], // Optional - E.g. design, news, cooking
+          Pubdate         : 'Nov 29, 2016 04:00:00 GMT', // Optional - Date the RSS feed came online
+          ttl             : '60', // Optional - How many minutes the channel is cached before being refreshed from the source
+          custom_namespaces: { // Defines the media:content used below. This is required to make images defined in media:content to appear in some RSS aggregators
             'content' : 'http://purl.org/rss/1.0/modules/content/',
             'wfw'     : 'http://wellformedweb.org/CommentAPI/',
             'itunes'  : 'http://www.itunes.com/dtds/podcast-1.0.dtd',
@@ -65,16 +65,16 @@ var scriptRunner = schedule.scheduleJob(rule, function() {
             title       : posts[key].title,
             description : posts[key].description, // Post description
             url         : 'https://yourSite.com/' + posts[key].fullUrl, // Url to the full post
-            date        : posts[key].date, // optional - date of publication,
+            date        : posts[key].date, // Optional - Date of publication,
             custom_elements: [{
               'media:content': {
                 _attr: {
                   url       : posts[key].assetUrl + '?format=yourSize', // '?format=' fetches a specific image size in cases where there are multple images in different sizes
-                  type      : posts[key].contentType, // e.g. image/jpeg, image/png, text/html // optional
-                  medium    : 'image', // optional
-                  isDefault : 'true', // optional
-                  width     : '500', // optional - desired output width of image
-                  height    : 'auto' // optional - desired output height of image
+                  type      : posts[key].contentType, // Optional - E.g. image/jpeg, image/png, text/html // Optional
+                  medium    : 'image', // Optional
+                  isDefault : 'true', // Optional
+                  width     : '500', // Optional - Desired output width of image
+                  height    : 'auto' // Optional - Desired output height of image
                 }
               }
             }]
