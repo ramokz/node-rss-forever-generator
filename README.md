@@ -25,7 +25,7 @@ npm install
 ```
 
 
-## Adding default
+## Adding data source
 
 Inside
 ```
@@ -94,7 +94,7 @@ feed.item({
           });
 ```
 
-### _Further documentation_
+### _Further information_
 [node-rss documentation](https://www.npmjs.com/package/node-rss)
 
 ## Set a schedule
@@ -109,8 +109,9 @@ rule.dayOfWeek  =  5; // runs on Fridays (0 = Monday, 6 = Sunday)
 ```
 Note: Only one rule is required.
 
-### _Further documentation & examples_
+### _Further information_
 [node-schedule documentation](https://www.npmjs.com/package/node-schedule)
+
 
 
 ## Running tasks
@@ -134,3 +135,6 @@ _or_
 ```
 forever stop forever.js
 ```
+
+### _Further documentation_
+[forever documentaiton](https://www.npmjs.com/package/forever)
