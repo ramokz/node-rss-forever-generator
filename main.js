@@ -11,7 +11,6 @@ var OK    = 200; // Status 200 is a successful return.
 
 
 rule.minute = 55; // Runs command every hour at 55 minuts past. E.g. 8:55, 9:55, 10:55
-                  // Documentation: https://www.npmjs.com/package/node-schedule
 
 ////////////////////
 // Schedules the script to run at a specific time and date - defined in 'rule'.
