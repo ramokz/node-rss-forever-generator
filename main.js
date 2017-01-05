@@ -52,7 +52,7 @@ var scriptRunner = schedule.scheduleJob(rule, function() {
           categories      : ['category 1', 'category 2', 'category 3'], // optional - e.g. design, news, 
           Pubdate         : 'Nov 29, 2016 04:00:00 GMT', // optional - date the RSS feed came online
           ttl             : '60', // optional - how many minutes the channel is cached before being refreshed from the source
-          custom_namespaces: { // Defines the media:content used below. This is required to make images defined in media:content to appear in some RSS readers
+          custom_namespaces: {
             'content' : 'http://purl.org/rss/1.0/modules/content/',
             'wfw'     : 'http://wellformedweb.org/CommentAPI/',
             'itunes'  : 'http://www.itunes.com/dtds/podcast-1.0.dtd',
