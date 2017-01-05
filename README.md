@@ -14,12 +14,12 @@ Change to your desired directory
 cd your-folder-path
 ```
 
-Download the files
+Clone the files
 ```
 git clone git@github.com:MarcusSkov node-rss-forever-generator
 ```
 
-Install dependencies
+Install the dependencies
 ```
 npm install
 ```
@@ -27,7 +27,6 @@ npm install
 
 ## Adding data source
 
-Inside
 ```
 main.js
 ```
@@ -99,7 +98,7 @@ feed.item({
 
 ## Set a schedule
 This tells the script how often it should run.
-Can be anything from every minute to a specific day and time of the week.
+Can be anything from every minute to a specific time and day of the week.
 
 The following example will run on Fridays at 6:55pm.
 ``` js
@@ -115,7 +114,7 @@ Note: Only one rule is required.
 
 
 ## Running tasks
-Once all the RSS formatting is setup and a schedule has been set it's time to start the server using _forever_ 
+Once all the RSS formatting is setup and a schedule has been set, simply start the server using _forever_.
 
 ### Starting forever
 
@@ -137,6 +136,13 @@ forever stop forever.js
 ```
 
 ### _Further information_
-[forever documentaiton](https://www.npmjs.com/package/forever)
+[forever documentation](https://www.npmjs.com/package/forever)
 
 If everything has been formatted correctly you should have a newly generated RSS feed in your root folder of the repository.
+
+## Optional forever settings
+
+If you want to have a bit more control over forever you can use forever-monitor to, e.g., make forever only run a fixed number of times.
+
+### _Further information_
+<a href="https://www.npmjs.com/package/forever-monitor" target="_blank">forever-monitor documentation</a>
