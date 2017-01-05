@@ -136,5 +136,5 @@ _or_
 forever stop forever.js
 ```
 
-### _Further documentation_
+### _Further information_
 [forever documentaiton](https://www.npmjs.com/package/forever)

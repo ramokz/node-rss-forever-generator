@@ -6,14 +6,14 @@ var schedule        = require('node-schedule');
 var rule            = new schedule.RecurrenceRule();
 
 
-var DONE  = 4; // ReadyState 4 means the request is done.
-var OK    = 200; // Status 200 is a successful return.
+var DONE  = 4; // ReadyState 4 means the request is done
+var OK    = 200; // Status 200 is a successful return
 
 
 rule.minute = 55; // Runs command every hour at 55 minuts past. E.g. 8:55, 9:55, 10:55
 
 ////////////////////
-// Schedules the script to run at a specific time and date - defined in 'rule'.
+// Schedules the script to run at a specific time and date - defined in 'rule'
 ////////////////////
 var scriptRunner = schedule.scheduleJob(rule, function() {
 
