@@ -63,8 +63,8 @@ var scriptRunner = schedule.scheduleJob(rule, function() {
         for (var key in posts) {
           feed.item({
             title       : posts[key].title,
-            url         : 'https://yourSite.com/' + posts[key].fullUrl, // Url to the full post
             description : posts[key].description, // Post description
+            url         : 'https://yourSite.com/' + posts[key].fullUrl, // Url to the full post
             date        : posts[key].date, // optional - date of publication,
             custom_elements: [{
               'media:content': {
@@ -73,8 +73,8 @@ var scriptRunner = schedule.scheduleJob(rule, function() {
                   type      : posts[key].contentType, // e.g. image/jpeg, image/png, text/html // optional
                   medium    : 'image', // optional
                   isDefault : 'true', // optional
-                  width     : '500', // optional - Desired output width of image
-                  height    : 'auto' // optional - Desired output height of image
+                  width     : '500', // optional - desired output width of image
+                  height    : 'auto' // optional - desired output height of image
                 }
               }
             }]
