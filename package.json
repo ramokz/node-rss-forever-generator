@@ -1,7 +1,7 @@
 {
   "name"         : "rss-generator",
   "version"      : "4.0.4",
-  "description"  : "Parses RSS feed for Squarespace + Mailchimp.",
+  "description"  : "RSS feed generator and scraper, built with Node.js",
   "main"         : "main.js",
   "author"       : "Marcus Skov",
   "dependencies" : {

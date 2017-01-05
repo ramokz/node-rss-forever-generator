@@ -38,20 +38,20 @@ var scriptRunner = schedule.scheduleJob(rule, function() {
 
         // RSS Metadata Setup
         var feed = new RSS({
-          title           : 'Title of your feed', // Title of the feed
-          description     : 'Description of your feed', // Description of the feed
-          site_url        : 'https://yourSite.com/', // Link to site the feed is hosted on
-          feed_url        : 'https://yourSite.com/feed.xml', // optional - url to the XML feed
-          image_url       : 'https://yourDomain/images/rss_image.png', // optional - image that RSS readers use when displaying your feed (feed thumbnail) 
-          docs            : 'https://validator.w3.org/feed/docs/rss2.html', // optional & fixed - url for RSS documentation
-          managingEditor  : 'editor@yourCompany', // optional - email address for the editor of the feed posts
-          webMaster       : 'webMaster@yourCompany', // optional - email address for the webmaster
+          title           : 'Title of your feed',
+          description     : 'Description of your feed',
+          site_url        : 'https://yourSite.com/',
+          feed_url        : 'https://yourSite.com/feed.xml',
+          image_url       : 'https://yourDomain/images/rss_image.png', // optional - feed thumbnail
+          docs            : 'https://validator.w3.org/feed/docs/rss2.html', // optional
+          managingEditor  : 'editor@yourCompany', // optional
+          webMaster       : 'webMaster@yourCompany', // optional
           copyright       : 'year© yourCompany', // optional
-          language        : 'en', // optional - Full reference list: http://www.rssboard.org/rss-language-codes
-          categories      : ['category 1', 'category 2', 'category 3'], // optional - e.g. design, news, 
-          Pubdate         : 'Jan 01, 2017 00:00:00 GMT', // optional - date the RSS feed came online
+          language        : 'en', // optional - Reference: http://www.rssboard.org/rss-language-codes
+          categories      : ['category 1', 'category 2', 'category 3'], // optional - e.g. design, news, cooking
+          Pubdate         : 'Nov 29, 2016 04:00:00 GMT', // optional - date the RSS feed came online
           ttl             : '60', // optional - how many minutes the channel is cached before being refreshed from the source
-          custom_namespaces: {
+          custom_namespaces: { // Defines the media:content used below. This is required to make images defined there to appear in some RSS readers
             'content' : 'http://purl.org/rss/1.0/modules/content/',
             'wfw'     : 'http://wellformedweb.org/CommentAPI/',
             'itunes'  : 'http://www.itunes.com/dtds/podcast-1.0.dtd',
@@ -62,19 +62,19 @@ var scriptRunner = schedule.scheduleJob(rule, function() {
 
         for (var key in posts) {
           feed.item({
-            title       : posts[key].title, // Post title
+            title       : posts[key].title,
             url         : 'https://yourSite.com/' + posts[key].fullUrl, // Url to the full post
             description : posts[key].description, // Post description
-            date        : posts[key].date, // optional - date of publication
+            date        : posts[key].date, // optional - date of publication,
             custom_elements: [{
               'media:content': {
                 _attr: {
-                  url       : posts[key].assetUrl + '?format=yourSize', // Fetches a specific image size in cases where there are multple versions of the same image. Sizes are defined as, e.g., 500w (500px width), 356h (356px height)
-                  type      : posts[key].contentType, // e.g. image/jpeg, image/png, text/html
-                  medium    : 'image',
-                  isDefault : 'true',
-                  width     : '500', // Defines the width of the image other services (e.g. Mailchimp) sets it as.
-                  height    : 'auto' // Defines the height of the image other services (e.g. Mailchimp) sets it as.
+                  url       : posts[key].assetUrl + '?format=yourSize', // '?format=' fetches a specific image size in cases where there are multple images in different sizes
+                  type      : posts[key].contentType, // e.g. image/jpeg, image/png, text/html // optional
+                  medium    : 'image', // optional
+                  isDefault : 'true', // optional
+                  width     : '500', // optional - Desired output width of image
+                  height    : 'auto' // optional - Desired output height of image
                 }
               }
             }]
